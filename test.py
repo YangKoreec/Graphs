@@ -12,7 +12,7 @@ theoretical_values = stats.norm.ppf(theoretical_quantiles)
 
 print(data.min())
 
-# Строим графиr
+# Строим график
 plt.scatter(theoretical_values, sample_quantiles)
 plt.plot(theoretical_values, theoretical_values, color='red', linestyle='--')  # линия идеала
 plt.xlabel('Теоретические квантили')
