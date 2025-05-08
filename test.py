@@ -11,6 +11,7 @@ sample_quantiles = np.sort(data)
 theoretical_values = stats.norm.ppf(theoretical_quantiles)
 
 print(data.min())
+print("test")
 
 # Строим график
 plt.scatter(theoretical_values, sample_quantiles)
