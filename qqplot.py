@@ -12,6 +12,7 @@ plt.scatter(x, normal_data, color="blue")
 plt.title("График QQ-plot")
 plt.xlabel("Теоретические квантили")
 plt.ylabel('Выборочные квантили')
-plt.grid(True)
+plt.grid(True, which='both')
+plt.minorticks_on()
 
 plt.show()
