@@ -1,23 +1,19 @@
-import numpy as np
-import scipy.stats as stats
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Пример данных
-data = np.random.normal(0, 1, 100)
+x = np.linspace(0, 10, 100)
 
-# Квантиль-данные
-theoretical_quantiles = np.linspace(0, 1, len(data))
-sample_quantiles = np.sort(data)
-theoretical_values = stats.norm.ppf(theoretical_quantiles)
+plt.figure(figsize=(10, 5))
+plt.suptitle("testjlsdf")
+# Первый подграфик (1-я строка, 2 столбца, 1-я позиция)
+plt.subplot(2, 1, 1)
+plt.plot(x, np.sin(x))
+plt.title("Синус")
 
-print(data.min())
-print("test")
+# Второй подграфик (1-я строка, 2 столбца, 2-я позиция)
+plt.subplot(2, 1, 2)
+plt.plot(x, np.cos(x))
+plt.title("Косинус")
 
-# Строим график
-plt.scatter(theoretical_values, sample_quantiles)
-plt.plot(theoretical_values, theoretical_values, color='red', linestyle='--')  # линия идеала
-plt.xlabel('Теоретические квантили')
-plt.ylabel('Выборочные квантили')
-plt.title('QQ plot')
-plt.grid(True)
+plt.tight_layout()
 plt.show()
